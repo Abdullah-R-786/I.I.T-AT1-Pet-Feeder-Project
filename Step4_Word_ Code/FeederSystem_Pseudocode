@@ -1,0 +1,52 @@
+#Automatic Pet Feeder Project Pseudocode:
+
+START
+System = ON
+LOOP continuously (24/7):
+ 
+    Check feeder capacity (current_FeederCapacity)
+    IF (current_FeederCapacity) insufficient 
+        Log event (log_Capacity)
+        Alert staff to refill feeder (alertStaff)
+Continue checking capacity until sufficient 
+WAIT 1 second
+
+
+Check current RTC time (currentRTC)
+    IF (currentRTC) time = 08:00 OR 08:30 OR 18:00 OR 18:30
+
+    Determine animal to feed based on currentRTC:
+        08:00 → Dispense dog food (servoMotor = 45°)
+        08:30 → Dispense cat food (servoMotor = 45°)
+        18:00 → Dispense dog food (servoMotor = 45°)
+        18:30 → Dispense cat food (servoMotor = 45°)
+
+ELSE 
+Don’t dispense any food (servoMotor = 0°)
+Continue checking current_FeederCapacity AND currentRTC 
+WAIT 1 second
+
+
+    Attempt to dispense food
+    IF dispense successful
+        Log success (log_DSuccess)
+    ELSE
+        Log failure (log_DFail)
+        Alert staff of failure (alertStaff)
+Continue trying to dispense food until success or fix from staff
+WAIT 1 second
+
+        
+ 
+    Wait 15 minutes after for food consumption
+    Measure bowl weight (measureB_Weight)
+    IF food consumed >= 85% of dispensed quantity
+        Log success of consumption (logC_Success)
+    ELSE
+        Log issue (logC_Issue)
+        Alert staff that pet not eating properly (alertStaff)
+ 
+    Re-check feeder capacity (current_FeederCapacity)
+    Alert staff if refill needed (alertStaff)
+ 
+END LOOP/Start from beginning again
