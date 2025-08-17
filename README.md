@@ -48,6 +48,7 @@ This project is an automated pet feeding system designed to dispense food to pet
 - Camera module for visual pet monitoring
 - Voice assistant compatibility (e.g., Alexa, Google Assistant)
 - Battery backup for power outages
+- Micro Digital Circuit Display
 - Enhanced error handling and retry logic
 
 ---
