@@ -1,0 +1,45 @@
+
+#IIT AT1 Automatic Pet Feeder Project Analysis
+
+##Analysing the problem:
+
+We are required to build and program an automated pet feeder for our client (a local animal shelter organisation) with a set of specific requirements which need to be met for our client. 
+•	The project will begin with phase 1, where we will primarily design and simulate the software-based logic and behaviour of the automatic pet feeder system we will be developing.
+•	Phase 2 will only proceed after the development of Phase 1’s logic algorithm (which will be documented in this file). 
+•	Phase 2 will primarily entail the hardware-based development of the automatic pet feeder using budget-oriented components which are easy to attain in case of any hardware malfunctions which may require replacements in the future. Such budget costing components may include a servo motor, appropriate sensors, low-cost memory, etc.
+
+##The required features of the automated pet feeder system include:
+
+•	A time-based scheduled distribution of food for both dogs and cats
+•	The system should be able to monitor how much food has or hasn't been consumed by the pets
+•	It should also push out an alert to notify staff if an issue occurs. e.g. if food was not dispensed by the scheduled time, if the food storage unit is empty, pets not consuming the provided food within a certain period of time, system errors, etc.
+
+
+##Inputs:
+•	Current time (via Real Time Clock)
+•	Scheduled feeding times
+•	Weight sensor readings of food bowl
+•	Level sensor readings of food container
+•	Filling food into food container/storage unit
+
+##Outputs:
+•	Servo motor dispenser state 
+•	Dispensing food at scheduled times
+•	Alerts to staff
+•	Quantity/weight of monitored food 
+•	Documented log records 
+
+
+
+##Assumptions and potential limitations:
+
+•	System must be budget oriented
+•	The feeder has a limitation of only being able to dispense dry pet food for easy maintenance of system due to limitations of design/budget etc. and to eliminate potential risk of electronic components getting wet
+•	Algorithm will require the total weight of the food bowl to subtract the weight of the bowl itself so that only the weight of the actual food within the bowl is counted/considered by weight sensor.
+•	Assumption that weight and level sensors will provide accurate readings.
+•	Only one bowl is used for dispensing food into for each automatic feeder system/unit.
+•	Source of power will be limited to a wired connection which connects to wall outlets, requiring a constant flow of energy for proper functionality and operation.
+•	Built in memory to record event logs
+•	Method of alerts include blinking LED sequence and sound alert to external system where staff usually are.
+
+
